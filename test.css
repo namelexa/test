@@ -1,0 +1,87 @@
+.container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  height: 500px;
+  background-color: #efefef;
+  /* горизонтальное выравнивание */
+  justify-content: flex-start;
+  /* выравнивание по левому краю*/
+  justify-content: flex-end;
+  /* выравнивание по правому краю*/
+  justify-content: center;
+  /* выравнивание по центру(горизонталь)*/
+  justify-content: space-between;
+  /* первый и последний элемент приклеивается по краям, остальные распределяют пространство на равные части между собой*/
+  justify-content: space-around;
+  /* равные растояния между всеми элементами*/
+  
+  /* вертикальное выравнивание */
+  align-items: flex-start;
+  /*элементы прижимаются к верхнему краю*/
+  align-items: flex-end;
+  /*элементы прижимаются к нижнемукраю*/
+  align-items: center;
+  /*элементы выравниваются по центру*/
+  align-items: baseline;
+  /*элементы выравниваются по базовой линии*/
+  /* направление отображения */
+  flex-direction: row;
+  /* обычный порядок элементов */
+  flex-direction: row-reverse;
+  /* обратный порядок элементов */
+  flex-direction: column;
+  /* выравнивание элементов в колонку */
+  flex-direction: column-reverse;
+  /* выравнивание элементов в колонку + обратный порядок элементов*/
+  /* многострочность элементов */
+  flex-wrap: nowrap;
+  /* кастомно, строки не переносятся */
+  flex-wrap: wrap;
+  /* последний элемент, который не влазит, съезжает на новую строку  */
+  flex-wrap: wrap-reverse;
+  /* последний элемент, который не влазит, съезжает на новую строку + отображение наоборот */
+  /* заполнение контента по вертикали . Работает когда задано либо направление, либо многосторочность*/
+  align-content: flex-start;
+  /* from start */
+  align-content: flex-end;
+  /*from end*/
+  align-content: center;
+  /*from ceter*/
+  align-content: space-between;
+  /*Верхний рядок к верху, нижний к низу*/
+  align-content: space-around;
+}
+.item {
+  background-color: #ccc;
+  border: 1px solid red;
+  /* порядок элементов */
+  order: 0;
+  /* custom */
+  order: -1;
+  /*элемент переходит в начало списка*/
+  order: 1;
+  /*элемент переходит в конец списка*/
+  /* бзовая ширина элементов */
+  flex-basis: 150px;
+}
+.item.active {
+  /* порядок элементов */
+  order: 0;
+  /* custom */
+  order: -1;
+  /*элемент переходит в начало списка*/
+  order: 1;
+  /*элемент переходит в конец списка*/
+  /* Растяжение элементов */
+  flex-grow: 0 ;
+  /* поток*/
+  flex-flow: column;
+  /* перестраивается в колонку */
+  /* Сужение элементов */
+  flex-shrink: 1;
+  /* Выравнимание отдельных элементов */
+  align-self: ;
+}
